@@ -1,0 +1,2 @@
+first : execute the tailwind.config file and specify the files in which we wanna apply the tailwind classes
+create index.css and import the 3 things than we're done !!

@@ -1,13 +1,124 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap');
+.Rubik
+{
+    font-family: 'Rubik';
+}
+.first_div
+{
+  background-image: url("./images/pattern-bg-desktop.png");
+  text-align: center;
+  color: white;
+  background-repeat: repeat-x;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input 
+{
+    padding: 15px;
+    border-radius: 8px 0px 0px 8px ;
+    border-style:solid;
+border-color: transparent;
+width: 350px;
+color: black;
+}
+input::placeholder
+{
+    font-size: 17px;
+}
+form
+{
+    display: flex;
+    justify-content: center;
+}
+form button
+{
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 0px 10px 10px 0px ;
+
+}
+.result
+{
+    position: absolute;
+width:80%;
+z-index: 50;
+   /* display: flex;
+   justify-content: space-around; */
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.result div h4
+{
+    color: black;
+    opacity: .5;
+}
+
+
+.result div h3
+{
+    color: black;
+    font-size: 18px;
+}
+.leaflet-container
+{
+    height: 61vh;
+    padding: 0px;
+    margin: 0px;
+    z-index: 0;
+    box-sizing: content-box;
+}
+
+
+.load
+{
+padding: 20px; 
+display: flex;
+justify-content: center;
+z-index: 90;
+}
+.load div 
+{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-color: darkblue;
+    margin-left: 10px;
+    
+animation-name: up_down;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+
+}
+.load div:nth-child(2)
+{
+    animation-delay: 0.2s;
+}
+.load div:nth-child(3)
+{
+    animation-delay: 0.4s;
+}
+
+@keyframes up_down {
+    0% 
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: .5;
+        transform: translateY(10px);
+    }
+    
 }
